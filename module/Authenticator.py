@@ -4,3 +4,4 @@ class Authenticator:
         self.url = ''
 
     def _make_url(self):
+        pass
