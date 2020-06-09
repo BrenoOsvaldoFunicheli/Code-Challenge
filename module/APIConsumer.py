@@ -4,6 +4,11 @@ from config import Environment
 
 class APIConsumer:
     def __init__(self):
+        """
+            ---- Attributes----
+            self.rq : abstraction of the methods present in request
+            self.env:
+        """
         self.rq = requests
         self.env = Environment()
         self.url = self.env.make_search_url()
@@ -20,12 +25,17 @@ class APIConsumer:
         if self.is_valid(sts.status_code):
             return sts.json()
 
-    def process_forecast(self):
+    def process_result(self):
         # parcial result of the query on the API
         prc_result = self._get_data()
         self.result = prc_result['list']
 
+    def get_forecast(self):
+        return self.result
+
 
 if __name__ == '__main__':
     a = APIConsumer()
-    a.get_forecast()
+    a.process_result()
+    rs = a.get_forecast()
+    print(rs)

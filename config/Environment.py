@@ -7,8 +7,7 @@ class Environment:
 
     def _get_api_key(self):
         """
-        Function returns appid need in the url search
-        :arg
+        :returns Function returns appid need in the url search
         """
         return self.app_id
 
@@ -18,7 +17,6 @@ class Environment:
     def _get_city(self):
         """
         :returns This method returns city_id for certain city
-
         """
         return self.city_id
 
