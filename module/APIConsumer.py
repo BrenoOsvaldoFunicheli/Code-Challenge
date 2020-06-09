@@ -1,16 +1,21 @@
 import requests
-from config import Environment
+from config import Authentication
 
 
 class APIConsumer:
-    def __init__(self):
+    def __init__(self, auth=None):
         """
             ---- Attributes----
             self.rq : abstraction of the methods present in request
             self.env:
         """
         self.rq = requests
-        self.env = Environment()
+
+        if not auth:
+            self.env = Authentication()
+        else:
+            self.env = auth
+
         self.url = self.env.make_search_url()
         self.result = ''
 

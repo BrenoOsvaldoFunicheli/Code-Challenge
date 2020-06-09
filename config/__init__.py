@@ -1,1 +1,2 @@
-from config.Environment import Environment
+from config.Authentication import Authentication
+from config.settings import Environment
