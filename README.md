@@ -50,6 +50,7 @@ days = ", ".join(lst_umbrella)
 
 ```
 
+
 As the API is based on authentication by a specific key, two ways were considered for its consumption, one that takes 12-factor into account and centralizes the information in an .env file and another that values the OOP demonstrated in the previous code.
 It should be noted that the first code is executed automatically as long as the .env is properly configured.
  
